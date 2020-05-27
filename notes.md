@@ -2,4 +2,5 @@
 
 > 'When action grows unprofitable, gather information; when information grows unprofitable, sleep.'——Ursula K. Le Guin, The Left Hand of Darkness
 
->
+> A sense of what a good program looks like is developed in practice, not learned from a list of rules.
+
