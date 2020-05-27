@@ -9,3 +9,86 @@
 >  In practice, the terms ECMAScript and JavaScript can be used interchangeably—they are two names for the same language.
 
 > monospaced font
+
+> JavaScript uses a fixed number of bits, 64 of them, to store a single number value.
+
+```javascript
+alert(`half of 100 is ${100 / 2}`)  // half of 100 is 50
+```
+
+-  typeof  // unary operator 一元运算符 
+```javascript
+// Not all operators are symbols. Some are written as words. One example is the typeof operator, which produces a string value naming the type of the value you give it.
+// binary operator 二元运算符
+
+console.log(typeof 4.5)  // number
+console.log(typeof 'x')  // string
+
+```
+
+- Boolean
+```javascript
+true
+false
+```
+
+- comaprison
+```javascript
+> // is greater than
+< // is less than
+<= // is less than or equal to 
+>= // is greater than or equal to
+== // is equal to
+!= // is not equal to 
+
+console.log(NaN == NaN) // false
+```
+
+- logical operators
+```javascript
+&& // and
+|| // or
+! // not
+```
+
+- conditional operator(ternary operator)
+```javascript
+console.log(true ? 1 : 2)  // 1
+```
+
+- two empty values
+```javascript
+// an accident of JavaScript's design
+null
+undefined
+```
+
+- automatic type conversion
+```javascript
+console.log(8 * null)
+// → 0
+console.log("5" - 1)
+// → 4
+console.log("5" + 1)
+// → 51
+console.log("five" * 2)
+// → NaN
+console.log(false == 0)
+// → true
+console.log(null == undefined);
+// → true
+console.log(null == 0);
+// → false
+
+
+// When you do not want any type conversions to happen, there are two additional operators: === and !==. 
+```
+
+- short-circuiting of operators
+```javascript
+console.log(null || "user")
+// → user
+console.log("Agnes" || "user")
+// → Agnes
+```
+
