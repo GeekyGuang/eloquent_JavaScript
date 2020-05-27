@@ -4,3 +4,8 @@
 
 > A sense of what a good program looks like is developed in practice, not learned from a list of rules.
 
+> A good programming language helps the programmer by allowing them to talk about the actions that the computer has to perform on a higher level. It helps omit details, provides convenient building blocks (such as while and console.log), allows you to define your own building blocks (such as sum and range), and makes those blocks easy to compose.
+
+>  In practice, the terms ECMAScript and JavaScript can be used interchangeably—they are two names for the same language.
+
+> monospaced font
