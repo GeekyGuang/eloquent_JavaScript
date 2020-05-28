@@ -92,3 +92,32 @@ console.log("Agnes" || "user")
 // → Agnes
 ```
 
+### chapter 2
+
+> A fragment of code that produces a value is called an expression.
+> If an expression corresponds to a sentence fragment, a JavaScript statement corresponds to a full sentence. A program is a list of statements.
+
+- bindings  
+```javascript
+// let var const
+
+let one = 1, two = 2;
+console.log(one + two);
+
+// You should imagine bindings as tentacles, rather than boxes. They do not contain values; they grasp them—two bindings can refer to the same value. 
+
+// var (short for “variable”), is the way bindings were declared in pre-2015 JavaScript. 
+
+// const stands for constant. It defines a constant binding, which points at the same value for as long as it lives.
+```
+
+- function
+```javascript
+prompt(argument);
+// The prompt function isn’t used much in modern web programming, mostly because you have no control over the way the resulting dialog looks, but can be helpful in toy programs and experiments.
+```
+
+- control flow
+```javascript
+// The braces({ and })  can be used to group any number of statements into a single statement, called a block.
+```
