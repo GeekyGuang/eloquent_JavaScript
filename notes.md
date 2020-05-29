@@ -120,4 +120,15 @@ prompt(argument);
 - control flow
 ```javascript
 // The braces({ and })  can be used to group any number of statements into a single statement, called a block.
+
+!''  // true, all strings except "" convert to true
+
+
+if (false != true) {
+  console.log("That makes sense.");
+  if (1 < 2) {
+    console.log("No surprise there.");
+  }
+}
+// indenting, I like to use two spaces for every open block
 ```
