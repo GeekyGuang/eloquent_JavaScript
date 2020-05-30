@@ -132,3 +132,31 @@ if (false != true) {
 }
 // indenting, I like to use two spaces for every open block
 ```
+
+- exercise chapter3
+```javascript
+/**************     打印三角形   ****************/
+let message='';
+for(let j=1; j<8; j++){
+  for (let i=0; i<j; i++) {
+     message = message + "#";
+  }
+  console.log(message);
+  message = "";
+}
+/*
+#
+##
+###
+####
+#####
+######
+#######
+*/
+// better way
+for (let line "#"; line.length < 8; line += "#")
+  console.log(line);
+
+
+
+```
