@@ -178,6 +178,21 @@ for (let n = 1; n <= 100; n++) {
   console.log(output || n);
 }
 
+/*********** chessboard *************/
+function chessBoard(size){
+  let shape = "";
+  for (let x = 0; x < size; x++) {
+    for (let y = 0; y < size; y++) {
+      if ((x + y) % 2 == 0) {
+        shape += " ";
+      } else {
+        shape += "#";
+      }
+    }
+    shape += "\n";
+  }
+  console.log(shape);
+}
 
-
+chessBoard(8);
 ```
