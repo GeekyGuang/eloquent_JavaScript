@@ -411,3 +411,48 @@ console.log(objA);
 
 // {a: "helllo", b: "world"}
 ```
+
+```javascript
+function remove(array, index) {
+  return array.slice(0, index)  // slice切片
+    .concat(array.slice(index + 1));  // 拼数组
+}
+console.log(remove(["a", "b", "c", "d", "e"], 2));
+// → ["a", "b", "d", "e"]
+
+array.unshift("hello") // 数组前插入
+array.shift() // 弹出第一个元素
+array.indexOf(2)
+array.lastIndexOf(3)
+
+
+```
+
+
+- string
+```javascript
+let s = "hello"
+s.indexOf("l")
+s.trim()   // 去掉两边空格
+
+
+let sentence = "Secretarybirds specialize in stomping";
+let words = sentence.split(" ");
+console.log(words);
+// → ["Secretarybirds", "specialize", "in", "stomping"]
+console.log(words.join(". "));
+// → Secretarybirds. specialize. in. stomping
+
+console.log("LA".repeat(3));
+// → LALALA
+
+function max(...numbers) {  // 接受多个参数
+  let result = -Infinity;
+  for (let number of numbers) {  // 遍历数组
+    if (number > result) result = number;
+  }
+  return result;
+}
+console.log(max(4, 1, 9, -2));
+// → 9
+```
