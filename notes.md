@@ -403,3 +403,11 @@ console.log(objectA);
 // Arrays are a kind of specialized object
 typeof [] // "object"
 ```
+
+```javascript
+let a = "helllo", b = "world";
+let objA = {a, b}; // property name = binding name
+console.log(objA);
+
+// {a: "helllo", b: "world"}
+```
