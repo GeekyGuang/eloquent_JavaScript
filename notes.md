@@ -196,7 +196,41 @@ function chessBoard(size){
 
 chessBoard(8);
 ```
+- define a function
+```javascript
+// method one
+const square = function(x) {
+    return x * x;
+};
 
+
+// method two
+function square(x) {
+    return x * x;
+} // no semicolon
+
+// arrow function
+const square1 = (x, y) => {return x * y;};
+const square2 = x => x * x;
+const horn = () => {
+    console.log("Toot");
+};
+
+
+// default argument value
+function minus(a, b) {
+  if (b === undefined) return -a;  // if b is not given, it's undefined
+  else return a - b;
+}
+
+function power(base, exponent = 2) {
+  let result = 1;
+  for (let count = 0; count < exponent; count++) {
+    result *= base;
+  }
+  return result;
+}
+```
 
 - var, let ,const
 ```javascript
@@ -225,3 +259,147 @@ console.log(n);
 // → 10
 ```
 
+- 闭包 closure
+```javascript
+function wrapValue(n) {
+  let local = n;
+  return () => local;  // 返回一个function
+}
+
+let wrap1 = wrapValue(1);
+let wrap2 = wrapValue(2);
+console.log(wrap1());
+// → 1
+console.log(wrap2());
+
+
+function multiplier(factor) {
+  return number => number * factor;
+}
+
+let twice = multiplier(2);  // 创建环境
+console.log(twice(5));
+```
+```javascript
+function zeroPad(number, width) {
+  let string = String(number);
+  while (string.length < width) {
+    string = "0" + string;
+  }
+  return string;
+}
+
+function printFarmInventory(cows, chickens, pigs) {
+  console.log(`${zeroPad(cows, 3)} Cows`);   // '${expression}'
+  console.log(`${zeroPad(chickens, 3)} Chickens`);
+  console.log(`${zeroPad(pigs, 3)} Pigs`);
+}
+
+printFarmInventory(7, 16, 3);
+```
+
+
+```javascript
+function isEven(n) {
+  if (n == 0) return true;
+  else if (n == 1) return false;
+  else if (n < 0) return isEven(-n);
+  else return isEven(n - 2);
+}
+
+console.log(isEven(50));
+// → true
+console.log(isEven(75));
+// → false
+console.log(isEven(-1));
+// → false
+
+/************************************************/
+function countChar(string, ch) {
+  let counted = 0;
+  for (let i = 0; i < string.length; i++) {
+    if (string[i] == ch) {
+      counted += 1;
+    }
+  }
+  return counted;
+}
+
+function countBs(string) {
+  return countChar(string, "B");
+}
+
+console.log(countBs("BBC"));
+// → 2
+console.log(countChar("kakkerlak", "k"));
+// → 4
+```
+-- data structure
+
+```javascript
+// array is written as a list of values between square brackets, separated by commas.
+
+let listOfNumbers = [2, 3, 5, 7, 11];
+console.log(listOfNumbers[2]);
+console.log(listOfNumbers[2 -1]);
+
+
+/*  property  */
+// Almost all JavaScript values have properties. The exceptions are null and undefined. 
+null.length;
+// → TypeError: null has no properties
+value.x // x是property的名字
+value[x]  // x的值是property的名字
+
+array.length
+array["length"]
+
+/* method */
+// Properties that contain functions are generally called methods
+let doh = "Doh";
+console.log(typeof doh.toUpperCase);
+// → function
+console.log(doh.toUpperCase());
+// → DOH
+
+array.push("hello");  // 最后插入
+array.pop()  // 最后弹出
+
+/**** object ****/
+// Values of the type object are arbitrary collections of properties. 
+let day1 = {
+  squirrel: false,
+  events: ["work", "touched tree", "pizza", "running"],
+  "touched tree": "Touched a tree"  // 无效的binding name要加引号
+};
+console.log(day1.squirrel);
+// → false
+console.log(day1.wolf);
+// → undefined
+day1.wolf = false;
+console.log(day1.wolf);
+// → false
+
+
+
+let anObject = {left: 1, right: 2};
+console.log(anObject.left);
+delete anObject.left; // delete property
+console.log(anObject.left);// → undefined
+console.log("left" in anObject);// → false // 判断是否存在，property name要加引号
+console.log("right" in anObject);// → true
+
+// Object.keys()函数获取property数组
+console.log(Object.keys(anObject));  // ["right"]
+
+
+// Object.assign(objA, objB) 将B的property拷贝给A
+let objectA = {a: 1, b: 2};
+Object.assign(objectA, {b: 3, c: 4});
+console.log(objectA);
+// → {a: 1, b: 3, c: 4}
+
+
+// Arrays are a kind of specialized object
+typeof [] // "object"
+```
