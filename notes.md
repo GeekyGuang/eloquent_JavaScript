@@ -456,3 +456,21 @@ function max(...numbers) {  // 接受多个参数
 console.log(max(4, 1, 9, -2));
 // → 9
 ```
+
+- Math
+```javascript
+Math.max()
+Math.min()
+Math.sqrt()  // square root
+
+Math.sin()
+Math.cos()
+Math.tan()
+Math.PI
+
+Math.random() // 0 - 1 小数
+Math.floor()
+Math.round()
+Math.ceil()
+Math.abs()  // absolute
+```
